@@ -88,3 +88,59 @@ section{
     animation-fill-mode: forwards;
 }
 
+/*Modal styles*/
+
+#modal{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 2.8rem;
+}
+
+#modal_names_content{
+    background-color: var(--pink);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    width: 23rem;
+    height: 23rem;
+    padding: 2.5rem;
+    border: 0.2rem solid gray;
+    border-radius: 2.8rem;
+    display: flex;
+    justify-items: space-between; 
+
+
+}
+
+#modal_names_content input{
+    width: 11rem;
+}
+#add_btn{
+    width: 2.5rem;
+}
+#add_btn:hover, #drawn_name:hover{
+    background-color: rgb(10, 235, 10);
+}
+
+#drawn_name{
+    width: 5rem;
+}
+
+#modal_names_content input, #add_btn, #drawn_name{
+    padding: 0.4rem;
+    border-radius: 0.6rem;
+    margin-right: 0.4rem;
+}
+
+
