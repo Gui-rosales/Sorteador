@@ -38,8 +38,7 @@ h1{
     color: white;
 }
 section{
-    margin: 2rem;
-    padding: 1rem;
+    margin-top: 2rem;
     
     display: flex;
     justify-content: space-between; /*to use the space between, it must be set on a container/div/section with the display flex*/
@@ -90,8 +89,8 @@ section{
 
 /*Modal styles*/
 
-#modal{
-    display: block;
+.modal{
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -115,7 +114,7 @@ section{
     width: 23rem;
     height: 23rem;
     padding: 2.5rem;
-    border: 0.2rem solid gray;
+    border: 0.2rem solid var(--light-blue);
     border-radius: 2.8rem;
     display: flex;
     justify-items: space-between; 
@@ -124,23 +123,53 @@ section{
 }
 
 #modal_names_content input{
-    width: 11rem;
+    width: 10rem;
 }
 #add_btn{
     width: 2.5rem;
 }
 #add_btn:hover, #drawn_name:hover{
     background-color: rgb(10, 235, 10);
+    color: white;
 }
 
 #drawn_name{
     width: 5rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-sizing: border-box
+    
 }
 
 #modal_names_content input, #add_btn, #drawn_name{
     padding: 0.4rem;
     border-radius: 0.6rem;
     margin-right: 0.4rem;
+}
+
+.close{
+    color: #aaa;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul{ 
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 0.2rem solid var(--light-blue);
+    width: 100%;
+    padding-left: 0.4rem;
+    border-radius: 1.5rem;
+    background-color: var(--light-pink);
+
 }
 
 
