@@ -79,12 +79,14 @@ section{
     animation-name: moving;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+    cursor:pointer;
 }
 #names:hover{
     background-color: var(--pink);
     animation-name: moving;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+    cursor:pointer;
 }
 
 /*Modal styles*/
@@ -103,7 +105,7 @@ section{
     border-radius: 2.8rem;
 }
 
-#modal_names_content{
+.innerModal{
     background-color: var(--pink);
     position: absolute;
     top: 50%;
@@ -128,9 +130,10 @@ section{
 #add_btn{
     width: 2.5rem;
 }
-#add_btn:hover, #drawn_name:hover{
+#add_btn:hover, #drawn_name:hover, #draw_btn:hover{
     background-color: rgb(10, 235, 10);
     color: white;
+    cursor: pointer;
 }
 
 #drawn_name{
@@ -151,6 +154,7 @@ section{
     color: #aaa;
     font-size: 2rem;
     font-weight: bold;
+    float: right;
 }
 
 .close:hover,
@@ -164,7 +168,7 @@ ul{
     list-style-type: none;
     font-weight: bold;
     font-size: 1rem;
-    border: 0.2rem solid var(--light-blue);
+    border: 0.2rem solid var(--pink); 
     width: 100%;
     padding-left: 0.4rem;
     border-radius: 1.5rem;
@@ -172,4 +176,47 @@ ul{
 
 }
 
+/*Customization of the numbers part*/
 
+#modal_numbers_content input{
+    width: 13rem;
+    /* height: 2rem; */
+}
+
+#modal_numbers_content div{
+    width: 100%;
+}
+#draw_btn{
+    /* height: 3rem; */
+    width: 3.8rem;
+}
+
+#modal_numbers_content input, #draw_btn{
+    padding: 0.4rem;
+    border-radius: 0.6rem;
+    margin-right: 0.4rem;
+}
+#number_container{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#number{
+    font-size: 2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: white;
+
+
+    border: 2px solid #f4abc4;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

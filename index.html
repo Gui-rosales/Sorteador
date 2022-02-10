@@ -23,9 +23,14 @@
                     Números
                 </button>
                 <div id="modal_numbers" class="modal">
-                    <div id="modal_numbers_content">
+                    <div id="modal_numbers_content" class="innerModal">
                         <div>
+                            <input id="number_interval" type="number" placeholder="Digite o intervalo de números" required value="">
+                            <button id="draw_btn">Sortear</button>
                             <span class="close">&times;</span>
+                            <div id="number_container">
+                                <p id="number"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -33,15 +38,15 @@
                     Nomes
                 </button>
                 <div id="modal_names" class="modal">
-                    <div id="modal_names_content">
+                    <div id="modal_names_content" class="innerModal">
                         <div>
-                            <input type="text-box" type="text" placeholder="type your text here">
+                            <input id="input_names" type="text-box" type="text" placeholder="type your text here">
                             <button id="add_btn">+</button>
                             <button id="drawn_name">sortear</button>
                             <span class="close" onclick="closeModalButton()">&times;</span>
                             <section>
-                                <ul>
-                                    <li>teste</li>
+                                <ul id="list">
+                                  
                                 </ul>
                             </section>
                         </div>
