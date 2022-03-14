@@ -1,222 +1,241 @@
 *{
-   margin: 0px; 
-   padding: 0px;
-   font-family: 'Poppins', sans-serif;
-   --darker-blue: #225564;
-   --light-blue: #47798c; 
-   --pink: #d3a9ab;
-   --light-pink: #e4ced0;
-}
-
-body{
-    background-color: var(--darker-blue);
-}
-
-main{
-    display: flex;
-}
-#container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    /* centralize the container */
-    
-    width: 25rem;
-    height: 25rem;
-    padding: 5rem;
-
-    background-color: var(--light-pink);
-    border: 0.2rem solid;
-    border-radius: 3rem;
-}
-
-h1{
-    font-weight: bold;
-    text-align: center;
-    color: white;
-}
-section{
-    margin-top: 2rem;
-    
-    display: flex;
-    justify-content: space-between; /*to use the space between, it must be set on a container/div/section with the display flex*/
-    /* set the space between the two buttons */
-}
-
-#numbers{
-    margin-top: 3rem;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    
-    font-style: italic;
-    font-weight: bold;
-
-}
-
-#names{
-    margin-top: 3rem;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    
-    font-style: italic;
-    font-weight: bold;
-}
-@keyframes moving{
-    from{margin-top: 3rem;}
-    to{margin-top:2.5rem;};
-}
-@keyframes shadow{
-    from{box-shadow: 0px 0px 0px black;}
-    to{box-shadow: 0px 10px 2px black;}
-}
-
-#numbers:hover{
-    background-color: var(--pink);
-    animation-name: moving;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    cursor:pointer;
-}
-#names:hover{
-    background-color: var(--pink);
-    animation-name: moving;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    cursor:pointer;
-}
-
-/*Modal styles*/
-
-.modal{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 2.8rem;
-}
-
-.innerModal{
-    background-color: var(--pink);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    
-    width: 23rem;
-    height: 23rem;
-    padding: 2.5rem;
-    border: 0.2rem solid var(--light-blue);
-    border-radius: 2.8rem;
-    display: flex;
-    justify-items: space-between; 
-
-
-}
-
-#modal_names_content input{
-    width: 10rem;
-}
-#add_btn{
-    width: 2.5rem;
-}
-#add_btn:hover, #drawn_name:hover, #draw_btn:hover{
-    background-color: rgb(10, 235, 10);
-    color: white;
-    cursor: pointer;
-}
-
-#drawn_name{
-    width: 5rem;
-    font-weight: bold;
-    font-size: 0.8rem;
-    box-sizing: border-box
-    
-}
-
-#modal_names_content input, #add_btn, #drawn_name{
-    padding: 0.4rem;
-    border-radius: 0.6rem;
-    margin-right: 0.4rem;
-}
-
-.close{
-    color: #aaa;
-    font-size: 2rem;
-    font-weight: bold;
-    float: right;
-}
-
-.close:hover,
-.close:focus{
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-ul{ 
-    list-style-type: none;
-    font-weight: bold;
-    font-size: 1rem;
-    border: 0.2rem solid var(--pink); 
-    width: 100%;
-    padding-left: 0.4rem;
-    border-radius: 1.5rem;
-    background-color: var(--light-pink);
-
-}
-
-/*Customization of the numbers part*/
-
-#modal_numbers_content input{
-    width: 13rem;
-    /* height: 2rem; */
-}
-
-#modal_numbers_content div{
-    width: 100%;
-}
-#draw_btn{
-    /* height: 3rem; */
-    width: 3.8rem;
-}
-
-#modal_numbers_content input, #draw_btn{
-    padding: 0.4rem;
-    border-radius: 0.6rem;
-    margin-right: 0.4rem;
-}
-#number_container{
-    width: 100%;
-    height: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-#number{
-    font-size: 2rem;
-    width: 4.5rem;
-    height: 4.5rem;
-    background-color: white;
-
-
-    border: 2px solid #f4abc4;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    margin: 0px; 
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    --darker-blue: #225564;
+    --light-blue: #47798c; 
+    --pink: #d3a9ab;
+    --light-pink: #e4ced0;
+ }
+ 
+ body{
+     background-color: var(--darker-blue);
+ }
+ 
+ main{
+     display: flex;
+ }
+ #container{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+     /* centralize the container */
+     
+     width: 25rem;
+     height: 25rem;
+     padding: 5rem;
+ 
+     background-color: var(--light-pink);
+     border: 0.2rem solid;
+     border-radius: 3rem;
+ }
+ 
+ h1{
+     font-weight: bold;
+     text-align: center;
+     color: white;
+ }
+ section{
+     margin-top: 2rem;
+     
+     display: flex;
+     justify-content: space-between; /*to use the space between, it must be set on a container/div/section with the display flex*/
+     /* set the space between the two buttons */
+ }
+ 
+ #numbers{
+     margin-top: 3rem;
+     width: 7rem;
+     height: 7rem;
+     border-radius: 50%;
+     
+     font-style: italic;
+     font-weight: bold;
+ 
+ }
+ 
+ #names{
+     margin-top: 3rem;
+     width: 7rem;
+     height: 7rem;
+     border-radius: 50%;
+     
+     font-style: italic;
+     font-weight: bold;
+ }
+ @keyframes moving{
+     from{margin-top: 3rem;}
+     to{margin-top:2.5rem;};
+ }
+ @keyframes shadow{
+     from{box-shadow: 0px 0px 0px black;}
+     to{box-shadow: 0px 10px 2px black;}
+ }
+ 
+ #numbers:hover{
+     background-color: var(--pink);
+     animation-name: moving;
+     animation-duration: 0.3s;
+     animation-fill-mode: forwards;
+     cursor:pointer;
+ }
+ #names:hover{
+     background-color: var(--pink);
+     animation-name: moving;
+     animation-duration: 0.3s;
+     animation-fill-mode: forwards;
+     cursor:pointer;
+ }
+ 
+ /*Modal styles*/
+ 
+ .modal{
+     display: none;
+     position: fixed;
+     z-index: 1;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgb(0,0,0);
+     background-color: rgba(0, 0, 0, 0.4);
+     border-radius: 2.8rem;
+ }
+ 
+ .innerModal{
+     background-color: var(--pink);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+     
+     width: 23rem;
+     height: 23rem;
+     padding: 2.5rem;
+     border: 0.2rem solid var(--light-blue);
+     border-radius: 2.8rem;
+     display: flex;
+     justify-items: space-between; 
+ 
+ 
+ }
+ 
+ #modal_names_content input{
+     width: 10rem;
+ }
+ #add_btn{
+     width: 2.5rem;
+ }
+ #add_btn:hover, #drawn_name:hover, #drawn_btn:hover{
+     background-color: rgb(10, 235, 10);
+     color: white;
+     cursor: pointer;
+ }
+ 
+ #drawn_name{
+     width: 5rem;
+     font-weight: bold;
+     font-size: 0.8rem;
+     box-sizing: border-box
+     
+ }
+ 
+ #modal_names_content input, #add_btn, #drawn_name{
+     padding: 0.4rem;
+     border-radius: 0.6rem;
+     margin-right: 0.4rem;
+ }
+ 
+ .close{
+     color: #aaa;
+     font-size: 2rem;
+     font-weight: bold;
+     float: right;
+ }
+ 
+ .close:hover,
+ .close:focus{
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+ }
+ 
+ ul{ 
+     list-style-type: none;
+     font-weight: bold;
+     font-size: 1rem;
+     border: 0.2rem solid var(--pink); 
+     width: 100%;
+     
+ }
+ ul li{
+     margin-bottom: 10px;
+     background-color: var(--light-pink);
+     padding-left: 0.4rem;
+     border-radius: 1.5rem;
+ }
+ 
+ /*Customization of the numbers part*/
+ 
+ #modal_numbers_content input{
+     width: 13rem;
+     /* height: 2rem; */
+ }
+ 
+ #modal_numbers_content div{
+     width: 100%;
+ }
+ #drawn_btn{
+     /* height: 3rem; */
+     width: 3.8rem;
+ }
+ 
+ #modal_numbers_content input, #drawn_btn{
+     padding: 0.4rem;
+     border-radius: 0.6rem;
+     margin-right: 0.4rem;
+ }
+ #number_container{
+     width: 100%;
+     height: 100%;
+     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ 
+ }
+ 
+ #number{
+     font-size: 2rem;
+     width: 4.5rem;
+     height: 4.5rem;
+     background-color: white;
+ 
+ 
+     border: 2px solid #f4abc4;
+     border-radius: 50%;
+ 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ #drawned_name{
+     background-color: var(--light-pink);
+     width: 100%;
+     
+     font-weight: bold;
+     padding-left: 0.4rem;
+ 
+     margin-top: 0.8rem;
+     margin-bottom: -1rem;
+ 
+     border-radius: 1.5rem;
+     text-align: center;
+ }
+ 
+ 
